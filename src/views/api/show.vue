@@ -47,7 +47,7 @@
                         </el-tooltip>
                     </el-form-item>
 
-                    <el-form-item label="是否生效">
+                    <el-form-item label="是否生效111111111">
                         <el-switch :disabled="true" v-model="tempItem.status" active-color="#13ce66"
                                    inactive-color="#f1f1f1"></el-switch>
                         <el-tooltip class="item" effect="dark" placement="top-start">

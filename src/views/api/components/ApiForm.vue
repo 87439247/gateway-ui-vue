@@ -37,7 +37,8 @@
                     </el-button>
                 </template>
                 <template v-else>
-                    <el-button class="btn" type="primary" icon="el-icon-arrow-right" size="mini" @click="nextStep">{{i18n('btn.next')}}
+                    <el-button class="btn" type="primary" icon="el-icon-arrow-right" size="mini" @click="nextStep">
+                        {{i18n('btn.next')}}
                     </el-button>
                 </template>
             </div>
@@ -71,6 +72,8 @@
             method: "*",
             domain: '', // 必填
             status: true,
+            enableCurl: false,
+            enabledFilterNames: '',
             // ip 的访问控制。ip 匹配。
             ipAccessControl: {
                 whitelist: [],
@@ -134,6 +137,8 @@
             method: "*",
             domain: '', // 必填
             status: true,
+            enableCurl: false,
+            enabledFilterNames: '',
             position: 0,
             matchRule: MATCH_RULE_OBJECT.matchAny,
         }
@@ -224,7 +229,7 @@
                 validateStepLast: false,
             }
         },
-        mixins:[i18nMixin],
+        mixins: [i18nMixin],
         components: {StepFirst, StepNext, StepLast, StepNextNext},
 
         computed: {

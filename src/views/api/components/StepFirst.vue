@@ -51,6 +51,20 @@
                 </el-tooltip>
             </el-form-item>
 
+
+            <el-form-item label="filter name" prop="enabledFilterNames">
+                <el-input v-model.trim="tempItem.enabledFilterNames" auto-complete="off"
+                          placeholder="filter name" style="width: 450px"></el-input>
+                <el-tooltip class="item" effect="dark" placement="top-start">
+                    <div slot="content">
+                        该字段必须和Method配合使用，同时满足才算这个请求匹配了这个API。<br/>
+                        定义API的URL，使用/来分割URL Path的每个部分，每个部分可以这些类型：<br/>
+
+                    </div>
+                    <i style="margin-left: 10px;color: #909399;" class="el-icon-info"></i>
+                </el-tooltip>
+            </el-form-item>
+
             <el-form-item label="接口请求类型(Method)">
                 <el-select v-model="tempItem.method" placeholder="接口请求类型" style="width: 200px">
                     <el-option v-for="item in methodsConstant" :key="item.value" :value="item.value"
@@ -77,6 +91,15 @@
 
             <el-form-item label="是否生效(Status)">
                 <el-switch v-model="tempItem.status" active-color="#13ce66"
+                           inactive-color="#f1f1f1"></el-switch>
+                <el-tooltip class="item" effect="dark" placement="top-start">
+                    <div slot="content">只有开关开着，1{{tempItem.status}}}1 才能生效。</div>
+                    <i style="margin-left: 10px;color: #909399;" class="el-icon-info"></i>
+                </el-tooltip>
+            </el-form-item>
+
+            <el-form-item label="是否启用curl">
+                <el-switch v-model="tempItem.enableCurl" active-color="#13ce66"
                            inactive-color="#f1f1f1"></el-switch>
                 <el-tooltip class="item" effect="dark" placement="top-start">
                     <div slot="content">只有开关开着，API 才能生效。</div>
@@ -173,6 +196,8 @@
                     method: "*",
                     domain: '', // 必填
                     status: true,
+                    enableCurl: false,
+                    enabledFilterNames: '',
                     position: 0,
                     matchRule: MATCH_RULE_OBJECT.matchDefault,
                 },
