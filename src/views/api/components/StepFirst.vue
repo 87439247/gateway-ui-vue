@@ -57,9 +57,19 @@
                           placeholder="filter name" style="width: 450px"></el-input>
                 <el-tooltip class="item" effect="dark" placement="top-start">
                     <div slot="content">
-                        该字段必须和Method配合使用，同时满足才算这个请求匹配了这个API。<br/>
-                        定义API的URL，使用/来分割URL Path的每个部分，每个部分可以这些类型：<br/>
-
+                        "HTTP-ACCESS" <br/>
+                        "HEADER" <br/>
+                        "XFORWARD"<br/>
+                        "BLACKLIST"<br/>
+                        "WHITELIST"<br/>
+                        "ANALYSIS"<br/>
+                        "RATE-LIMITING"<br/>
+                        "CIRCUIT-BREAKER"<br/>
+                        "VALIDATION"<br/>
+                        "CACHING"<br/>
+                        "JWT"<br/>
+                        "JS-ENGINE"<br/>
+                        "JSONP"<br/>
                     </div>
                     <i style="margin-left: 10px;color: #909399;" class="el-icon-info"></i>
                 </el-tooltip>
