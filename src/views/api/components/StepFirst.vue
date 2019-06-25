@@ -57,19 +57,20 @@
                           placeholder="filter name" style="width: 450px"></el-input>
                 <el-tooltip class="item" effect="dark" placement="top-start">
                     <div slot="content">
-                        "HTTP-ACCESS" <br/>
-                        "HEADER" <br/>
-                        "XFORWARD"<br/>
-                        "BLACKLIST"<br/>
-                        "WHITELIST"<br/>
-                        "ANALYSIS"<br/>
-                        "RATE-LIMITING"<br/>
-                        "CIRCUIT-BREAKER"<br/>
-                        "VALIDATION"<br/>
-                        "CACHING"<br/>
-                        "JWT"<br/>
-                        "JS-ENGINE"<br/>
-                        "JSONP"<br/>
+                        HTTP-ACCESS <br/>
+                        CURL <br/>
+                        HEADER <br/>
+                        XFORWARD<br/>
+                        BLACKLIST<br/>
+                        WHITELIST<br/>
+                        ANALYSIS<br/>
+                        RATE-LIMITING<br/>
+                        CIRCUIT-BREAKER<br/>
+                        VALIDATION<br/>
+                        CACHING<br/>
+                        JWT<br/>
+                        JS-ENGINE<br/>
+                        JSONP<br/>
                     </div>
                     <i style="margin-left: 10px;color: #909399;" class="el-icon-info"></i>
                 </el-tooltip>
