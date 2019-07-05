@@ -799,24 +799,37 @@
 
                         //
                         if (_node.cache.keys && _node.cache.keys.length > 0) {
+                            var newKeys = [];
                             _node.cache.keys.forEach((keyItem) => {
                                 if (keyItem.source === 5) {
                                     keyItem.name = '';
+                                    newKeys.push(keyItem)
                                 } else {
                                     keyItem.index = 0;
+                                    if (keyItem.name !== '') {
+                                        newKeys.push(keyItem)
+                                    }
                                 }
-                            })
+                            });
+                            _node.cache.keys = newKeys;
                         }
 
                         //
                         if (_node.cache.conditions && _node.cache.conditions.length > 0) {
+                            var newConditions = [];
                             _node.cache.conditions.forEach((conditionItem) => {
                                 if (conditionItem.parameter.source === 5) {
                                     conditionItem.parameter.name = '';
+                                    newConditions.push(conditionItem);
                                 } else {
                                     conditionItem.parameter.index = 0;
+                                    if (conditionItem.parameter.name !== '') {
+                                        newConditions.push(conditionItem);
+                                    }
                                 }
                             });
+                            _node.cache.conditions = newConditions;
+
                         }
                     } else {
                         delete _node.cache;
