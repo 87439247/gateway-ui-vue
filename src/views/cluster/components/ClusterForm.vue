@@ -12,6 +12,9 @@
                     </el-option>
                 </el-select>
             </el-form-item>
+            <el-form-item label="标签(cat domain)" prop="tag">
+                <el-input v-model="tempItem.tag" style="width: 200px"></el-input>
+            </el-form-item>
             <div style="margin-left: 70px">
                 <el-button @click="goList">返回</el-button>
                 <el-button v-if="isCreate" :loading="submitting" type="primary" @click="createItem('dataForm')">提交
@@ -33,7 +36,8 @@
         return {
             id: undefined,
             name: undefined,
-            loadBalance: LOAD_BALANCE_OBJECT.roundRobin
+            loadBalance: LOAD_BALANCE_OBJECT.roundRobin,
+            tag : ""
         }
     }
 

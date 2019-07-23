@@ -33,6 +33,11 @@
                     <span>{{ scope.row.loadBalance | loadBalanceFilter }}</span>
                 </template>
             </el-table-column>
+            <el-table-column label="标签">
+                <template slot-scope="scope">
+                    <span>{{scope.row.tag}}</span>
+                </template>
+            </el-table-column>
             <el-table-column label="操作" width="350">
                 <template slot-scope="scope">
                     <el-button size="mini" type="primary" @click="handleShowList(scope.row)">查看绑定的服务</el-button>
