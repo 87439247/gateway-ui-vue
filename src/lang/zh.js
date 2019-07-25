@@ -43,7 +43,8 @@ export default {
         addTips:'请先添加Cluster',
         address:'地址',
         protocol:'接口协议',
-        maxQPS:'支持的最大QPS'
+        maxQPS:'支持的最大QPS',
+        disable:'是否禁用'
     },
 
     routing: {},

@@ -207,7 +207,14 @@
                 </el-button>
 
             </el-form-item>
-
+            <el-form-item label="是否禁用">
+                <el-switch v-model="tempItem.disable" active-color="#13ce66"
+                           inactive-color="#f1f1f1"></el-switch>
+                <el-tooltip class="item" effect="dark" placement="top-start">
+                    <div slot="content">默认启用</div>
+                    <i style="margin-left: 10px;color: #909399;" class="el-icon-info"></i>
+                </el-tooltip>
+            </el-form-item>
 
             <div style="margin-left: 70px">
                 <el-button @click="goList">返回</el-button>
@@ -264,6 +271,7 @@
                 failureRateToClose: '',
                 succeedRateToOpen: ''
             },
+            disable: false,
             bindClusterId: '',
             bindClusterName: ''
         }

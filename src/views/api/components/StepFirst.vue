@@ -113,7 +113,7 @@
                 <el-switch v-model="tempItem.enableCurl" active-color="#13ce66"
                            inactive-color="#f1f1f1"></el-switch>
                 <el-tooltip class="item" effect="dark" placement="top-start">
-                    <div slot="content">只有开关开着，API 才能生效。</div>
+                    <div slot="content">此属性暂时禁用(无效)</div>
                     <i style="margin-left: 10px;color: #909399;" class="el-icon-info"></i>
                 </el-tooltip>
             </el-form-item>

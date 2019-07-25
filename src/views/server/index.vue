@@ -54,6 +54,11 @@
                     <span>{{scope.row.maxQPS}}</span>
                 </template>
             </el-table-column>
+            <el-table-column :label="i18n('server.disable')">
+                <template slot-scope="scope">
+                    <span>{{scope.row.disable}}</span>
+                </template>
+            </el-table-column>
             <el-table-column :label="i18n('btn.operator')" width="350">
                 <template slot-scope="scope">
                     <el-button size="mini" type="primary" @click="handleShow(scope.row)">{{i18n('btn.show')}}</el-button>
