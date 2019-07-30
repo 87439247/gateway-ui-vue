@@ -779,6 +779,9 @@
                             }
 
                             delete _node.retryStrategy.codesStr;
+                        } else {
+                            delete _node.retryStrategy.codes;
+                            delete _node.retryStrategy.codesStr;
                         }
 
                     } else {
